@@ -1,18 +1,54 @@
+:root {
+    /* Light mode variables */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #2c98f0;
+    --link-hover-color: #1d6ccd;
+  }
+  
+  body[data-theme="dark"] {
+    /* Dark mode variables */
+    --bg-color: #111111;
+    --text-color: #dddddd;
+    --link-color: #21f621;
+    --link-hover-color: #1fd31f;
+  }
+  
+  body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Courier New', monospace;
+/* body {
+    font-family: 'Merriweather', serif;
     line-height: 1.6;
-    color: #21f621;
+    color: #cecece;
     background-color: #111;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 header {
     background-color: #111;
@@ -22,7 +58,7 @@ header {
 }
 
 header h1 {
-    color: #21f621;
+    color: var(--text-color);
     font-size: 36px;
 }
 
@@ -39,7 +75,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #21f621;
+    color:var(--text-color);
     font-size: 18px;
 }
 
@@ -56,8 +92,7 @@ section {
 h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #21f621;
-    border-bottom: 1px solid #21f621;
+    color:var(--text-color);
     padding-bottom: 5px;
 }
 
@@ -70,27 +105,27 @@ li {
     margin-bottom: 10px;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: #2c98f0;
 }
 
 a:hover {
     color: #1d6ccd;
-}
+} */
 
 footer {
     background-color: #111;
     padding: 20px;
     text-align: center;
-    color: #21f621;
+    color: var(--text-color);
     width: 100%;
 }
 /* New styles for individual blog post pages */
 
 .post-date {
     font-size: 14px;
-    color: #ccc;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -108,3 +143,20 @@ article p {
     line-height: 1.6;
     margin-bottom: 20px;
 }
+
+/* Toggle button styles */
+
+#theme-toggle {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+    background-color: var(--link-hover-color);
+  }
