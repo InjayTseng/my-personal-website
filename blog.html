@@ -21,9 +21,10 @@
               <li><a href="blog.html">Blog</a></li>
               <!-- Add any other navigation items -->
               <button id="theme-toggle">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon" style="display: none;"></i>
-              </button>            </ul>
+                <span id="sun-icon">☀</span>
+                <span id="moon-icon">🌙</span>
+              </button>
+            </ul>
           </nav>
     </header>
 
@@ -39,17 +40,18 @@
   </section>
 
   <footer>
-    <!-- Your site footer -->
-  </footer>
+    <p>Contact david@lootex.io</p>
+    <p>&copy; 2023 DavidYCTseng. All rights reserved.</p>
+</footer>
   <script>
     const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = themeToggle.querySelector('.fa-sun');
-    const moonIcon = themeToggle.querySelector('.fa-moon');
+    const sunIcon = document.getElementById('sun-icon');
+    const moonIcon = document.getElementById('moon-icon');
     const currentTheme = localStorage.getItem('theme') || 'light';
   
     document.body.setAttribute('data-theme', currentTheme);
-    sunIcon.style.display = currentTheme === 'light' ? 'inline-block' : 'none';
-    moonIcon.style.display = currentTheme === 'light' ? 'none' : 'inline-block';
+    sunIcon.style.display = currentTheme === 'light' ? 'inline' : 'none';
+    moonIcon.style.display = currentTheme === 'light' ? 'none' : 'inline';
   
     themeToggle.addEventListener('click', () => {
       const currentTheme = document.body.getAttribute('data-theme');
@@ -57,10 +59,12 @@
   
       document.body.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      sunIcon.style.display = newTheme === 'light' ? 'inline-block' : 'none';
-      moonIcon.style.display = newTheme === 'light' ? 'none' : 'inline-block';
+      sunIcon.style.display = newTheme === 'light' ? 'inline' : 'none';
+      moonIcon.style.display = newTheme === 'light' ? 'none' : 'inline';
     });
   </script>
+  
+  
   
   
   

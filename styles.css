@@ -10,8 +10,8 @@
     /* Dark mode variables */
     --bg-color: #111111;
     --text-color: #dddddd;
-    --link-color: #21f621;
-    --link-hover-color: #1fd31f;
+    --link-color: #1d6ccd;
+    --link-hover-color: #1d6ccd;
   }
   
   body {
@@ -51,7 +51,7 @@
 } */
 
 header {
-    background-color: #111;
+    background-color: var(--bg-color);
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -60,6 +60,11 @@ header {
 header h1 {
     color: var(--text-color);
     font-size: 36px;
+}
+
+nav {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 nav ul {
@@ -115,7 +120,7 @@ a:hover {
 } */
 
 footer {
-    background-color: #111;
+    var(--bg-color);
     padding: 20px;
     text-align: center;
     color: var(--text-color);
@@ -147,16 +152,28 @@ article p {
 /* Toggle button styles */
 
 #theme-toggle {
-    background-color: var(--link-color);
-    color: var(--bg-color);
-    font-size: 16px;
-    padding: 8px 16px;
+    background-color: transparent;
     border: none;
-    border-radius: 4px;
+    font-size: 24px;
+    padding: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 16px;
+    line-height: 1;
+  }
+  
+  #sun-icon, #moon-icon {
+    transition: display 0.3s ease;
   }
   
   #theme-toggle:hover {
-    background-color: var(--link-hover-color);
+    color: var(--link-hover-color);
   }
+  
