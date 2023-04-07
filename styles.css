@@ -86,3 +86,25 @@ footer {
     color: #21f621;
     width: 100%;
 }
+/* New styles for individual blog post pages */
+
+.post-date {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+article h1 {
+    margin-bottom: 10px;
+}
+
+article p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
