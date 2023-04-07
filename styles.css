@@ -154,14 +154,14 @@ article p {
 #theme-toggle {
     background-color: transparent;
     border: none;
-    font-size: 24px;
+    font-size: 18px;
     padding: 8px;
     cursor: pointer;
     transition: color 0.3s ease;
     display: inline-flex;
     align-items: center;
     position: absolute;
-    top: 8px;
+    top: 16px;
     right: 8px;
     color: var(--text-color);
     font-size: 18px;
@@ -177,3 +177,4 @@ article p {
     color: var(--link-hover-color);
   }
   
+
