@@ -1,79 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DavidYCTseng</title>
-    <link rel="stylesheet" href="styles.css">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-6jF7L0Gt1mzpMjcHKpHiQfriHcFV7f1F2v8D7Y+tGp5N5F5g5o5vMV7JQwiw5Gm8" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-6jF7L0Gt1mzpMjcHKpHiQfriHcFV7f1F2v8D7Y+tGp5N5F5g5o5vMV7JQwiw5Gm8"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1></h1>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <!-- Add any other navigation items -->
-              <button id="theme-toggle">
-                <span id="sun-icon">☀</span>
-                <span id="moon-icon">🌙</span>
-              </button>
-            </ul>
-        </nav>
+      <h1></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- Add any other navigation items -->
+          <button id="theme-toggle">
+            <span id="sun-icon">☀</span>
+            <span id="moon-icon">🌙</span>
+          </button>
+        </ul>
+      </nav>
     </header>
-	<section id="about">
-        <h2>About</h2>
-        <p>NFT/crypto maximalist. Every product has its soul. Crypto and NFTs in gaming.</p>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        NFT/crypto maximalist. Every product has its soul. Crypto and NFTs in
+        gaming.
+      </p>
     </section>
     <section id="overview">
-        <h2>Overview</h2>
-			<ul>
-				<li>8 years in startups</li>
-				<li>Raised 9M for the NFT Marketplace</li>
-				<li>Co-founded UXTesting (Techstars ‘18)</li>
-				<li>Co-founded Trenzink Studio (Closed)</li>
-			</ul>
+      <h2>Overview</h2>
+      <ul>
+        <li>8 years in startups</li>
+        <li>Raised 9M for the NFT Marketplace</li>
+        <li>Co-founded UXTesting (Techstars ‘18)</li>
+        <li>Co-founded Trenzink Studio (Closed)</li>
+      </ul>
     </section>
     <section id="what-i-do">
-        <h2>What I do</h2>
-			<ul>
-				<li>Startups / Product manager</li>
-				<li>Blockchain Smart contract Web3 basics</li>
-				<li>Token economics</li>
-				<li>Web3 architect design</li>
-			</ul>
+      <h2>What I do</h2>
+      <ul>
+        <li>Startups / Product manager</li>
+        <li>Blockchain Smart contract Web3 basics</li>
+        <li>Token economics</li>
+        <li>Web3 architect design</li>
+      </ul>
     </section>
     <footer>
-        <p>Contact david@lootex.io</p>
-        <p>&copy; 2023 DavidYCTseng. All rights reserved.</p>
+      <!-- <iframe
+        src="https://davidyctseng.substack.com/embed"
+        width="480"
+        height="320"
+        style="border: 1px solid #eee; background: white;"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+      <div class="iframe-overlay"></div> -->
+      <p>&copy; 2023 DavidYCTseng. All rights reserved.</p>
+      <div class="social-links">
+        <a
+          href="https://twitter.com/davidyctseng"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/davidyctseng/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/InjayTseng"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
     </footer>
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-        const currentTheme = localStorage.getItem('theme') || 'light';
-      
-        document.body.setAttribute('data-theme', currentTheme);
-        sunIcon.style.display = currentTheme === 'light' ? 'inline' : 'none';
-        moonIcon.style.display = currentTheme === 'light' ? 'none' : 'inline';
-      
-        themeToggle.addEventListener('click', () => {
-          const currentTheme = document.body.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-          document.body.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-          sunIcon.style.display = newTheme === 'light' ? 'inline' : 'none';
-          moonIcon.style.display = newTheme === 'light' ? 'none' : 'inline';
-        });
-      </script>      
-</body>
+      const themeToggle = document.getElementById('theme-toggle')
+      const sunIcon = document.getElementById('sun-icon')
+      const moonIcon = document.getElementById('moon-icon')
+      const currentTheme = localStorage.getItem('theme') || 'light'
 
+      document.body.setAttribute('data-theme', currentTheme)
+      sunIcon.style.display = currentTheme === 'light' ? 'inline' : 'none'
+      moonIcon.style.display = currentTheme === 'light' ? 'none' : 'inline'
+
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.body.getAttribute('data-theme')
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+
+        document.body.setAttribute('data-theme', newTheme)
+        localStorage.setItem('theme', newTheme)
+        sunIcon.style.display = newTheme === 'light' ? 'inline' : 'none'
+        moonIcon.style.display = newTheme === 'light' ? 'none' : 'inline'
+      })
+    </script>
+  </body>
 </html>

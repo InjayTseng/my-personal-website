@@ -178,3 +178,64 @@ article p {
   }
   
 
+/* Footer iframe styles */
+
+footer iframe {
+    /* ... */
+    position: relative;
+  }
+  
+  footer iframe::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition when changing themes */
+    pointer-events: none; /* Prevents the pseudo-element from blocking clicks */
+  }
+  
+  body[data-theme="dark"] footer iframe::after {
+    opacity: 0.4; /* Adjust opacity for dark theme */
+  }
+  
+
+  /* Social links styles */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  
+    /* Set the initial color based on the light theme */
+    color: #000;
+  }
+  
+  .social-links a:hover {
+    /* Set the hover color for the light theme */
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Dark mode styles */
+  
+  body[data-theme="dark"] .social-links a {
+    /* Set the color for the dark theme */
+    color: #fff;
+  }
+  
+  body[data-theme="dark"] .social-links a:hover {
+    /* Set the hover color for the dark theme */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  
